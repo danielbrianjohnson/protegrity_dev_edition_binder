@@ -1,8 +1,10 @@
 # Protegrity Developer Edition - Getting Started Notebook
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/protegrity/dev-edition-notebook/HEAD?filepath=getting-started-protection_binder.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/protegrity/dev-edition-notebook/HEAD?urlpath=tree/getting-started-protection_binder.ipynb)
 
 This repository contains an interactive Jupyter Notebook that demonstrates the **Protegrity AI Developer SDK** for protecting sensitive data.
+
+> **Note**: For the full branded experience with Protegrity colors and styling, use the Classic Notebook interface (default). The branding does not apply to JupyterLab.
 
 ## Quick Start
 
