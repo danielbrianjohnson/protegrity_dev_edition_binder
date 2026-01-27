@@ -1,5 +1,5 @@
 #!/bin/bash
-# Binder postBuild script
+# Binder postBuild script - v2
 # Installs Protegrity custom Jupyter Notebook styling and branding
 
 set -e
