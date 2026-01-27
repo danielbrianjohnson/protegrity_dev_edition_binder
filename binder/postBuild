@@ -1,0 +1,43 @@
+#!/bin/bash
+# Binder postBuild script
+# Installs Protegrity custom Jupyter Notebook styling and branding
+
+set -e
+
+echo "======================================"
+echo "Installing Protegrity Jupyter Branding"
+echo "======================================"
+
+# Create the Jupyter custom directory if it doesn't exist
+JUPYTER_CUSTOM_DIR="${HOME}/.jupyter/custom"
+mkdir -p "${JUPYTER_CUSTOM_DIR}"
+
+# Copy custom CSS
+if [ -f "assets/jupyter/custom.css" ]; then
+    echo "Installing custom.css..."
+    cp assets/jupyter/custom.css "${JUPYTER_CUSTOM_DIR}/custom.css"
+    echo "✓ custom.css installed"
+else
+    echo "⚠ Warning: assets/jupyter/custom.css not found"
+fi
+
+# Copy custom JavaScript
+if [ -f "assets/jupyter/custom.js" ]; then
+    echo "Installing custom.js..."
+    cp assets/jupyter/custom.js "${JUPYTER_CUSTOM_DIR}/custom.js"
+    echo "✓ custom.js installed"
+else
+    echo "⚠ Warning: assets/jupyter/custom.js not found"
+fi
+
+# Copy logo if it exists
+if [ -f "assets/protegrity-logo.png" ]; then
+    echo "Installing Protegrity logo..."
+    cp assets/protegrity-logo.png "${JUPYTER_CUSTOM_DIR}/protegrity-logo.png"
+    echo "✓ Logo installed"
+fi
+
+echo "======================================"
+echo "Protegrity branding installation complete!"
+echo "Custom files installed to: ${JUPYTER_CUSTOM_DIR}"
+echo "======================================"
